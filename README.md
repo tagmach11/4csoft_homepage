@@ -151,9 +151,5 @@ CSS 변수에서 transition 시간을 조정할 수 있습니다:
 ## 📄 라이선스
 
 Copyright © 2025 4CSoft Inc. All rights reserved.
-
 ---
-
-**4CSoft** - 혁신적인 학습관리시스템 LX2  
-📧 leo4@4csoft.com | 📞 02-544-2822
 
