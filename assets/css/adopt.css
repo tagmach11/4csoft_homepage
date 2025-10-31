@@ -113,6 +113,49 @@ body.sub #container {
   padding-right: 40px;
 }
 
+/* 토스 스타일 선택 UI */
+.toss-select-group {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 4px 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.toss-select-group::-webkit-scrollbar {
+  display: none;
+}
+
+.toss-select-option {
+  flex: 0 0 auto;
+  padding: 12px 20px;
+  border: 1.5px solid #e5e8eb;
+  border-radius: 12px;
+  background: white;
+  color: #4e5968;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  font-family: inherit;
+}
+
+.toss-select-option:hover {
+  border-color: #0064ff;
+  background: #f0f7ff;
+  color: #0064ff;
+}
+
+.toss-select-option.active {
+  background: #0064ff;
+  border-color: #0064ff;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 100, 255, 0.25);
+}
+
 .adopt-helper {
   display: none;
   font-size: 0.875rem;

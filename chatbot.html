@@ -329,3 +329,52 @@
 <div class="chatbot-button" id="chatbotButton">
 	<img src="assets/images/clients/chatbot-icon.svg" alt="LX2 챗봇">
 </div>
+
+<!-- 도입 문의 폼 모달 -->
+<div id="inquiryFormModal" class="inquiry-form-modal">
+	<div class="inquiry-form-overlay"></div>
+	<div class="inquiry-form-content">
+		<div class="inquiry-form-header">
+			<h3>무료 컨설팅 신청</h3>
+			<button class="inquiry-form-close" aria-label="닫기">×</button>
+		</div>
+		<form class="inquiry-form" id="inquiryForm">
+			<div class="inquiry-form-group">
+				<label class="inquiry-form-label" for="inquiry-name">이름 <span style="color:#dc3545">*</span></label>
+				<input class="inquiry-form-input" id="inquiry-name" name="name" type="text" placeholder="이름을 입력해주세요" required>
+				<div class="inquiry-form-error" id="inquiry-nameError"></div>
+			</div>
+			
+			<div class="inquiry-form-group">
+				<label class="inquiry-form-label" for="inquiry-email">이메일 <span style="color:#dc3545">*</span></label>
+				<input class="inquiry-form-input" id="inquiry-email" name="email" type="email" placeholder="이메일을 입력해주세요" required>
+				<div class="inquiry-form-error" id="inquiry-emailError"></div>
+			</div>
+			
+			<div class="inquiry-form-group">
+				<label class="inquiry-form-label" for="inquiry-phone">연락처 <span style="color:#dc3545">*</span></label>
+				<input class="inquiry-form-input" id="inquiry-phone" name="phone" type="tel" placeholder="예: 010-1234-5678" required>
+				<div class="inquiry-form-error" id="inquiry-phoneError"></div>
+			</div>
+			
+			<div class="inquiry-form-group">
+				<label class="inquiry-form-label" for="inquiry-message">문의내용 <span style="color:#dc3545">*</span></label>
+				<textarea class="inquiry-form-textarea" id="inquiry-message" name="message" placeholder="내용을 입력해주세요." required></textarea>
+				<div class="inquiry-form-error" id="inquiry-messageError"></div>
+			</div>
+			
+			<div class="inquiry-form-privacy">
+				<label style="display:flex; gap:8px; align-items:flex-start; font-size:0.85rem;">
+					<input type="checkbox" id="inquiry-privacyAgree" style="margin-top:2px;" required>
+					<span>개인정보 수집ㆍ이용에 동의합니다.</span>
+				</label>
+				<div class="inquiry-form-error" id="inquiry-privacyError"></div>
+			</div>
+			
+			<div class="inquiry-form-actions">
+				<button type="button" class="inquiry-btn-secondary" id="inquiryFormCancel">취소</button>
+				<button type="submit" class="inquiry-btn-primary">신청하기</button>
+			</div>
+		</form>
+	</div>
+</div>

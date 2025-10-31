@@ -78,14 +78,14 @@
 
         <div class="adopt-group">
           <label class="adopt-label" for="employees">임직원 수</label>
-          <select class="adopt-select" id="employees" name="employees">
-            <option value="" disabled selected>임직원 수를 선택해주세요</option>
-            <option value="1-10">1-10명</option>
-            <option value="11-50">11-50명</option>
-            <option value="51-100">51-100명</option>
-            <option value="101-500">101-500명</option>
-            <option value="500+">500명 이상</option>
-          </select>
+          <input type="hidden" id="employees" name="employees" value="">
+          <div class="toss-select-group" data-field="employees">
+            <button type="button" class="toss-select-option" data-value="1-10">1-10명</button>
+            <button type="button" class="toss-select-option" data-value="11-50">11-50명</button>
+            <button type="button" class="toss-select-option" data-value="51-100">51-100명</button>
+            <button type="button" class="toss-select-option" data-value="101-500">101-500명</button>
+            <button type="button" class="toss-select-option" data-value="500+">500명 이상</button>
+          </div>
         </div>
 
         <div class="adopt-group">
@@ -102,14 +102,14 @@
 
         <div class="adopt-group">
           <label class="adopt-label" for="source">LX2를 알게 된 경로</label>
-          <select class="adopt-select" id="source" name="source">
-            <option value="" disabled selected>유입 경로를 선택해주세요</option>
-            <option value="search">검색엔진</option>
-            <option value="recommendation">지인 추천</option>
-            <option value="advertisement">광고</option>
-            <option value="exhibition">전시회/세미나</option>
-            <option value="other">기타</option>
-          </select>
+          <input type="hidden" id="source" name="source" value="">
+          <div class="toss-select-group" data-field="source">
+            <button type="button" class="toss-select-option" data-value="search">검색엔진</button>
+            <button type="button" class="toss-select-option" data-value="recommendation">지인 추천</button>
+            <button type="button" class="toss-select-option" data-value="advertisement">광고</button>
+            <button type="button" class="toss-select-option" data-value="exhibition">전시회/세미나</button>
+            <button type="button" class="toss-select-option" data-value="other">기타</button>
+          </div>
         </div>
 
         <div class="adopt-group">
@@ -193,6 +193,26 @@
     });
     // 전화 입력 자동 하이픈
     document.getElementById('phone').addEventListener('input', function(e){ let v=e.target.value.replace(/\D/g,''); if(v.length>=4&&v.length<8){ v=v.slice(0,3)+'-'+v.slice(3); } else if(v.length>=8){ v=v.slice(0,3)+'-'+v.slice(3,7)+'-'+v.slice(7,11);} e.target.value=v; });
+    
+    // 토스 스타일 선택 UI
+    document.querySelectorAll('.toss-select-group').forEach(group => {
+      const fieldName = group.getAttribute('data-field');
+      const hiddenInput = document.getElementById(fieldName);
+      const options = group.querySelectorAll('.toss-select-option');
+      
+      options.forEach(option => {
+        option.addEventListener('click', function() {
+          // 같은 그룹 내의 모든 옵션에서 active 클래스 제거
+          options.forEach(opt => opt.classList.remove('active'));
+          // 클릭한 옵션에 active 클래스 추가
+          this.classList.add('active');
+          // hidden input에 값 설정
+          if (hiddenInput) {
+            hiddenInput.value = this.getAttribute('data-value');
+          }
+        });
+      });
+    });
   </script>
 </body>
 </html>
