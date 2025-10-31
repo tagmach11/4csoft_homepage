@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="robots" content="index,follow">
+<title>대량 접속 제어 - LX2 by 4CSoft</title>
+<!-- Primary Meta Tags -->
+<meta name="keywords" content="LX2, 학습관리시스템, 대량접속제어, 접속대기, 부하분산, LMS, 교육시스템">
+<meta name="description" content="동시 접속자 폭주 상황에서도 안정적으로 운영되는 LX2의 대량 접속 제어 시스템">
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.4csoft.com/mass-access-control.html">
+<meta property="og:title" content="대량 접속 제어 - LX2">
+<meta property="og:description" content="동시 접속자 폭주 상황에서도 안정적으로 운영되는 LX2의 대량 접속 제어 시스템">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J75VFW38V7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-J75VFW38V7');
+</script>
+<!-- Favicons -->
+<link rel="shortcut icon" href="assets/images/clients/logo_lx2.png">
+<link rel="icon" type="image/png" href="assets/images/clients/logo_lx2.png">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!-- Main CSS File -->
+<link href="assets/css/main.css" rel="stylesheet">
+<style>
+/* Mass Access Control Page Styles */
+body {
+  background: transparent !important;
+}
+
+#container {
+  background: transparent !important;
+}
+
+.mass-access {
+  padding: 6rem 0 4rem;
+  background: #f8f9fa;
+  min-height: calc(100vh - 80px);
+}
+
+.mass-access-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 0 2rem;
+}
+
+.mass-access-header h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+  line-height: 1.3;
+}
+
+.mass-access-header h1 .highlight {
+  background: linear-gradient(135deg, #0064FF 0%, #00a8ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.mass-access-header p {
+  font-size: 1.25rem;
+  color: #666;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* 플로우차트 섹션 */
+.flowchart-section {
+  max-width: 1400px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.flowchart-container {
+  background: white;
+  border-radius: 16px;
+  padding: 3rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  overflow-x: auto;
+}
+
+.flowchart-svg {
+  width: 100%;
+  height: auto;
+  min-width: 1200px;
+}
+
+/* 프로세스 섹션 */
+.process-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.process-section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.process-card {
+  background: white;
+  border-radius: 16px;
+  padding: 3rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.process-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.process-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.process-card h3 .number {
+  background: linear-gradient(135deg, #0064FF 0%, #00a8ff 100%);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.process-card .content {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.process-card .content p {
+  margin-bottom: 1rem;
+}
+
+.process-card .content p:last-child {
+  margin-bottom: 0;
+}
+
+/* 기능 카드 섹션 */
+.feature-cards {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.feature-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.feature-card h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: #0064FF;
+  color: white;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin: 4rem auto 0;
+  box-shadow: 0 4px 12px rgba(0, 100, 255, 0.3);
+}
+
+.back-button:hover {
+  background: #0052d9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 100, 255, 0.4);
+}
+
+.back-button svg {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+
+@media (max-width: 1200px) {
+  .feature-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .mass-access-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .mass-access-header p {
+    font-size: 1.125rem;
+  }
+  
+  .process-card {
+    padding: 2rem;
+  }
+  
+  .process-card h3 {
+    font-size: 1.25rem;
+  }
+  
+  .feature-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .process-section-title {
+    font-size: 1.5rem;
+  }
+  
+  .flowchart-container {
+    padding: 1.5rem;
+  }
+  
+  .flowchart-svg {
+    min-width: 1000px;
+  }
+}
+</style>
+</head>
+<body id="sub" class="sub">
+    
+<!-- Header -->
+<header id="header" role="banner">
+    <div class="header_b">
+        <div class="header_wrap">
+            <a href="index.html" class="logo">
+                <img src="assets/images/clients/logo_lx2.png" alt="LX2 학습관리시스템" class="logo-img">
+            </a>
+            <div class="menu_btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu_box">
+                <div class="menu_wrap">
+                    <ul class="dep1_wrap">
+                        <li class="dep1 arrow" data-path="/about">
+                            <a href="index.html">회사소개</a>
+                        </li>
+                        <li class="dep1 arrow" data-path="/features">
+                            <a href="features.html">주요기능</a>
+                        </li>
+                        <li class="dep1 arrow" data-path="/portfolio">
+                            <a href="#portfolio">사업실적</a>
+                        </li>
+                        <li class="dep1 arrow" data-path="/contact">
+                            <a href="inquiry.html">고객문의</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="login_right_box">
+                    <div>
+                        <a href="adopt.html" class="r_btn04"><span>도입문의</span></a>
+                        <a href="https://lx2.kr/" target="_blank" class="r_btn03"><span>체험하기</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main id="container">
+    <section class="mass-access">
+        <div class="inner">
+            <div class="mass-access-header" data-aos="fade-up" data-aos-duration="800">
+                <h1><span class="highlight">대량 접속 제어</span><br>LX2 시스템 개요</h1>
+                <p>동시 접속자 폭주 상황에서도 안정적으로 운영되는 시스템으로 <br>언제나 원활한 학습과 서비스 이용이 가능합니다.</p>
+            </div>
+
+            <!-- 접속 대기 프로세스 -->
+            <div class="process-section">
+                <h2 class="process-section-title" data-aos="fade-up" data-aos-duration="800">접속 대기 프로세스</h2>
+                
+                <div class="process-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <h3><span class="number">1</span> 로그인 페이지 접근</h3>
+                    <div class="content">
+                        <p>사용자가 로그인 페이지에 접근하면, 서버는 최대 로그인 가능 인원 수를 확인합니다.</p>
+                    </div>
+                </div>
+
+                <div class="process-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <h3><span class="number">2</span> 접속 제한 초과 시 대기 프로그램 이동</h3>
+                    <div class="content">
+                        <p>만약 접속 인원이 제한을 초과하면, 사용자는 접속 대기 프로그램으로 이동합니다.</p>
+                        <p>이 프로그램은 대기열 순위와 예상 대기시간을 표시하며, 로그인 가능 시점에 자동으로 본 로그인 페이지로 이동시킵니다.</p>
+                    </div>
+                </div>
+
+                <div class="process-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <h3><span class="number">3</span> 로그인 인증 과정</h3>
+                    <div class="content">
+                        <p>로그인 인증 과정에서는 계정 토큰 유효성 검증이 포함되어 불법 혹은 중복 접속을 방지합니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 대량 접속 제어의 필요성 및 효과 -->
+            <div class="process-section">
+                <h2 class="process-section-title" data-aos="fade-up" data-aos-duration="800">대량 접속 제어의 필요성 및 효과</h2>
+                
+                <div class="process-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <h3>서비스 안정성 확보</h3>
+                    <div class="content">
+                        <p>동시 접속 부하 분산을 통해 서비스 안정성을 확보합니다. 서버가 과부하 상태로 진입하기 전, 접속 인원을 관리하여 서비스 지연 및 다운을 예방합니다.</p>
+                    </div>
+                </div>
+
+                <div class="process-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <h3>사용자 경험 개선</h3>
+                    <div class="content">
+                        <p>대기 프로그램은 사용자에게 실시간으로 대기 순서를 제공해 이탈률을 줄이고 사용자 경험을 개선합니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 프로그램 기능 -->
+            <div class="process-section">
+                <h2 class="process-section-title" data-aos="fade-up" data-aos-duration="800">프로그램 기능</h2>
+                
+                <div class="feature-cards">
+                    <div class="feature-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                        <div class="icon">🔹</div>
+                        <h4>순번 대기 등록 및 부하 분산</h4>
+                        <p>접속 요청이 몰릴 경우 자동으로 순번을 부여합니다. 서버 자원을 효율적으로 분산하여 안정적으로 로그인 처리합니다.</p>
+                    </div>
+
+                    <div class="feature-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                        <div class="icon">🔹</div>
+                        <h4>대기열 현황 모니터링</h4>
+                        <p>관리자는 대기 인원 수, 접속률, 평균 대기 시간 등을 실시간 확인할 수 있습니다. 통계 화면에서는 로그인 추이, 서버 부하량을 시각화하여 표시합니다.</p>
+                    </div>
+
+                    <div class="feature-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                        <div class="icon">🔹</div>
+                        <h4>자동 전환 기능</h4>
+                        <p>대기 상태에서 순번이 도래하면 자동으로 로그인 페이지로 이동합니다. 사용자가 추가 입력 없이 접속을 이어갈 수 있습니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="index.html" class="back-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+                    메인으로 돌아가기
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer id="footer" role="contentinfo">
+    <div class="inner">
+        <div class="footer_top">
+            <div class="footer_logo">
+                <img src="assets/images/clients/logo_lx2.png" alt="LX2" class="logo-img">
+            </div>
+            <ul class="foot_menu">
+                <li><a href="index.html">회사소개</a></li>
+                <li><a href="features.html">주요기능</a></li>
+                <li><a href="privacy.html">개인정보처리방침</a></li>
+                <li><a href="brochure_viewer.html" target="_blank">서비스소개서</a></li>
+            </ul>
+        </div>
+        <div class="footer_info">
+            <p>회사명. (주)포씨소프트 &nbsp;&nbsp;<br> 설립일자. 1999년 5월 19일 &nbsp;&nbsp;<br>사업자등록번호: 211-86-52456
+             대표이사. 배정훈 &nbsp;&nbsp;<br> 주소. (13814) 경기도 과천시 과천동 372-15 우림빌딩 204호
+             업종. 응용 소프트웨어개발 및 공급 &nbsp;&nbsp;<br>Tel. 02-544-2822 &nbsp;&nbsp;<br> E-mail. leo4@4csoft.com</p>
+        </div>
+        <div class="footer_copyright">
+            <p>ⓒ 4CSoft Inc. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+// AOS 초기화
+AOS.init({
+    duration: 800,
+    once: true
+});
+
+// 메뉴 토글
+$('.menu_btn').click(function() {
+    $(this).toggleClass('active');
+    $('.menu_box').toggleClass('active');
+});
+</script>
+
+</body>
+</html>
+

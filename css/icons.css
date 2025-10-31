@@ -1,0 +1,52 @@
+/* ============================================
+   Toss Payments Style
+   ============================================ */
+
+.feature-icon {
+    width: 64px;
+    height: 64px;
+    padding: 14px;
+    border-radius: 12px;
+    background: var(--primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-md);
+    transition: all var(--transition-fast);
+}
+
+.feature-card:hover .feature-icon {
+    background: var(--primary);
+    transform: scale(1.05);
+}
+
+.feature-card:hover .feature-icon svg {
+    stroke: var(--white);
+}
+
+.feature-icon svg {
+    width: 100%;
+    height: 100%;
+    stroke: var(--primary);
+    transition: all var(--transition-fast);
+}
+
+/* Icon SVG Styles */
+.feature-icon svg,
+.feature-icon svg * {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+}
+
+/* Special icons for featured cards */
+.feature-card.featured .feature-icon {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+}
+
+.feature-card.featured .feature-icon svg {
+    stroke: var(--white);
+}
+
+

@@ -1,0 +1,201 @@
+/* Bootstrap Icons */
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css');
+
+/* AOS (Animate On Scroll) 기본 스타일 */
+[data-aos] {
+  pointer-events: none;
+}
+
+[data-aos].aos-animate {
+  pointer-events: auto;
+}
+
+/* Swiper 기본 스타일 */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* GLightbox 기본 스타일 */
+.glightbox-clean .gslide-description {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+}
+
+/* Fullpage.js 기본 스타일 */
+.fp-enabled {
+  overflow: hidden;
+}
+
+.fp-enabled body {
+  overflow: hidden;
+}
+
+.fp-section {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.fp-slide {
+  float: left;
+}
+
+.fp-slide, .fp-slidesContainer {
+  height: 100%;
+  display: block;
+}
+
+.fp-slides {
+  z-index: 1;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+/* Fullpage.js 오버라이드 */
+.lx_home_cont {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.lx_home_cont.fp-auto-height {
+  min-height: auto;
+}
+
+.fp-controlArrow {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  margin-top: -38px;
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.fp-controlArrow.fp-prev {
+  left: 15px;
+  width: 0;
+  border-width: 38.5px 34px 38.5px 0;
+  border-color: transparent #fff transparent transparent;
+}
+
+.fp-controlArrow.fp-next {
+  right: 15px;
+  border-width: 38.5px 0 38.5px 34px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.fp-controlArrow.fp-prev.fp-black {
+  border-color: transparent #000 transparent transparent;
+}
+
+.fp-controlArrow.fp-next.fp-black {
+  border-color: transparent transparent transparent #000;
+}
+
+.fp-scrollable {
+  overflow: hidden;
+  position: relative;
+}
+
+.fp-scroller {
+  overflow: hidden;
+}
+
+.fp-notransition {
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
+.fp-auto-height.fp-section,
+.fp-auto-height .fp-slide,
+.fp-auto-height .fp-tableCell {
+  height: auto !important;
+}
+
+.fp-responsive .fp-auto-height-responsive.fp-section,
+.fp-responsive .fp-auto-height-responsive .fp-slide,
+.fp-responsive .fp-auto-height-responsive .fp-tableCell {
+  height: auto !important;
+}
+
+/* Kendo UI 기본 스타일 */
+.k-icon {
+  font-family: "WebComponentsIcons";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-transform: none;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  speak: none;
+}
+
+.k-icon.k-i-js:before { content: "\e001"; }
+.k-icon.k-i-video-external:before { content: "\e002"; }
+.k-icon.k-i-volume-up:before { content: "\e003"; }
+.k-icon.k-i-chevron-up:before { content: "\e004"; }
+.k-icon.k-i-plus:before { content: "\e005"; }
+
+/* 로딩 상태 */
+.fp-loading {
+  overflow: hidden;
+}
+
+.fp-loading .fp-section {
+  opacity: 0;
+}
+
+.fp-ready .fp-section {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1200px) {
+  .fp-responsive .fp-controlArrow {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .fp-responsive .fp-controlArrow {
+    display: none;
+  }
+  
+  .fp-responsive .fp-slides {
+    height: auto;
+  }
+  
+  .fp-responsive .fp-section {
+    height: auto !important;
+  }
+}

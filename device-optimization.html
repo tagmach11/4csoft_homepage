@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="robots" content="index,follow">
+<title>여러 디바이스에서도 완벽한 화면 최적화 - LX2 by 4CSoft</title>
+<!-- Primary Meta Tags -->
+<meta name="keywords" content="LX2, 학습관리시스템, 반응형 웹, 디바이스 최적화, PC, 태블릿, 모바일, LMS, 교육시스템">
+<meta name="description" content="PC, 태블릿, 모바일 어디서나 동일한 사용자 경험을 제공하는 LX2의 반응형 웹 기반 기술">
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.4csoft.com/device-optimization.html">
+<meta property="og:title" content="여러 디바이스에서도 완벽한 화면 최적화 - LX2">
+<meta property="og:description" content="PC, 태블릿, 모바일 어디서나 동일한 사용자 경험을 제공하는 LX2의 반응형 웹 기반 기술">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J75VFW38V7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-J75VFW38V7');
+</script>
+<!-- Favicons -->
+<link rel="shortcut icon" href="assets/images/clients/logo_lx2.png">
+<link rel="icon" type="image/png" href="assets/images/clients/logo_lx2.png">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!-- Main CSS File -->
+<link href="assets/css/main.css" rel="stylesheet">
+<style>
+/* Device Optimization Page Styles */
+body {
+  background: transparent !important;
+}
+
+#container {
+  background: transparent !important;
+}
+
+.device-optimization {
+  padding: 6rem 0 4rem;
+  background: #f8f9fa;
+  min-height: calc(100vh - 80px);
+}
+
+.device-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 0 2rem;
+}
+
+.device-header h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+  line-height: 1.3;
+}
+
+.device-header h1 .highlight {
+  background: linear-gradient(135deg, #0064FF 0%, #00a8ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.device-header p {
+  font-size: 1.25rem;
+  color: #666;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* 이미지 3개 나란히 배치 */
+.device-images-grid {
+  max-width: 1200px;
+  margin: 0 auto 5rem;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.device-image-item {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.device-image-item img {
+  width: 100%;
+  max-width: 450px;
+  height: 100%;
+  max-height: 600px;
+  display: block;
+  border-radius: 30px;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
+  transition: transform 0.4s ease, filter 0.4s ease;
+  transform-origin: center center;
+  object-fit: contain;
+}
+
+.device-image-item:hover img {
+  transform: scale(1.2);
+  filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.25));
+}
+
+/* 첫 번째 이미지 작게 만들기 */
+.device-image-small img {
+  max-width: 350px;
+  max-height: 450px;
+}
+
+/* 콘텐츠 카드 섹션 */
+.device-cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.device-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.device-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.device-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.device-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.device-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.device-card li {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.8;
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.device-card li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #0064FF;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: #0064FF;
+  color: white;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin: 2rem auto 0;
+  box-shadow: 0 4px 12px rgba(0, 100, 255, 0.3);
+}
+
+.back-button:hover {
+  background: #0052d9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 100, 255, 0.4);
+}
+
+.back-button svg {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+
+/* 디자인 원칙 버튼 섹션 */
+.design-principles {
+  max-width: 900px;
+  margin: 5rem auto 3rem;
+  padding: 0 2rem;
+}
+
+.design-principles-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #1a1a1a;
+}
+
+.principles-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.principle-btn {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.principle-btn:hover {
+  border-color: #0064FF;
+  box-shadow: 0 4px 16px rgba(0, 100, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+.principle-btn .title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.principle-btn .underline {
+  width: 60px;
+  height: 2px;
+  background: #0064FF;
+  margin: 0 auto 0.5rem;
+  border: none;
+}
+
+.principle-btn .subtitle {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* 레이더 차트 섹션 */
+.chart-section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+.chart-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #1a1a1a;
+}
+
+.chart-container {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.radar-chart {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  padding-top: 4rem;
+}
+
+.chart-container-single {
+  background: white;
+  border-radius: 16px;
+  padding: 3rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart-content-container {
+  background: white;
+  border-radius: 16px;
+  padding: 3rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.chart-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.chart-content-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.chart-content-item .icon {
+  font-size: 1.5rem;
+  color: #0064FF;
+  flex-shrink: 0;
+}
+
+.chart-content-item .text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+@media (max-width: 1200px) {
+  .device-images-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .device-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .device-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .device-header p {
+    font-size: 1.125rem;
+  }
+  
+  .device-images-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .device-cards {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .device-card {
+    padding: 1.5rem;
+  }
+  
+  .device-card h3 {
+    font-size: 1.25rem;
+  }
+  
+  .device-image-item:hover img {
+    transform: none;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
+  }
+  
+  .device-image-item img {
+    max-width: 100%;
+    border-radius: 20px;
+  }
+  
+  .principles-buttons {
+    grid-template-columns: 1fr;
+  }
+  
+  .radar-chart {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    padding-top: 3rem;
+  }
+  
+  .chart-container,
+  .chart-container-single,
+  .chart-content-container {
+    padding: 1.5rem;
+  }
+  
+  .chart-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .design-principles-title,
+  .chart-title {
+    font-size: 1.5rem;
+  }
+}
+</style>
+</head>
+<body id="sub" class="sub">
+    
+<!-- Header -->
+<header id="header" role="banner">
+    <div class="header_b">
+        <div class="header_wrap">
+            <a href="index.html" class="logo">
+                <img src="assets/images/clients/logo_lx2.png" alt="LX2 학습관리시스템" class="logo-img">
+            </a>
+            <div class="menu_btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu_box">
+                <div class="menu_wrap">
+                    <ul class="dep1_wrap">
+                        <li class="dep1 arrow" data-path="/about">
+                            <a href="index.html">회사소개</a>
+                        </li>
+                        <li class="dep1 arrow" data-path="/features">
+                            <a href="features.html">주요기능</a>
+                        </li>
+                        <li class="dep1 arrow" data-path="/portfolio">
+                            <a href="#portfolio">사업실적</a>
+                        </li>
+                        <li class="dep1 arrow" data-path="/contact">
+                            <a href="inquiry.html">고객문의</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="login_right_box">
+                    <div>
+                        <a href="adopt.html" class="r_btn04"><span>도입문의</span></a>
+                        <a href="https://lx2.kr/" target="_blank" class="r_btn03"><span>체험하기</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main id="container">
+    <section class="device-optimization">
+        <div class="inner">
+            <div class="device-header" data-aos="fade-up" data-aos-duration="800">
+                <h1><span class="highlight">여러 디바이스</span>에서도<br>완벽한 화면 최적화</h1>
+                <p>PC, 태블릿, 모바일 어디서나 동일한 사용자 경험을 제공합니다.<br>자동으로 조정되는 반응형 레이아웃으로 학습 몰입도를 높이세요.</p>
+            </div>
+
+            <!-- 이미지 3개 나란히 배치 -->
+            <div class="device-images-grid">
+                <div class="device-image-item device-image-small" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <img src="assets/images/clients/designa.png" alt="LX2 반응형 웹 기반 기술">
+                </div>
+                <div class="device-image-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <img src="assets/images/clients/designb.png" alt="LX2 콘텐츠 관리 및 지침 준수">
+                </div>
+                <div class="device-image-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <img src="assets/images/clients/designc.png" alt="LX2 웹 표준 및 보안">
+                </div>
+            </div>
+
+            <!-- 디자인 원칙 버튼 섹션 -->
+            <div class="design-principles" data-aos="fade-up" data-aos-duration="800">
+                <h2 class="design-principles-title">디자인 원칙</h2>
+                <div class="principles-buttons">
+                    <div class="principle-btn">
+                        <div class="title">SIMPLE</div>
+                        <hr class="underline">
+                        <div class="subtitle">간단함</div>
+                    </div>
+                    <div class="principle-btn">
+                        <div class="title">EASY</div>
+                        <hr class="underline">
+                        <div class="subtitle">편리함</div>
+                    </div>
+                    <div class="principle-btn">
+                        <div class="title">VISUALIZATION</div>
+                        <hr class="underline">
+                        <div class="subtitle">시각화</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 콘텐츠 카드 섹션 -->
+            <div class="device-cards">
+                <div class="device-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <h3>반응형 웹 기반 기술</h3>
+                    <p>One Source Multi Use 방식으로 하나의 소스로 모든 디바이스를 대응합니다.</p>
+                    <ul>
+                        <li>하나의 도메인으로 통합 관리</li>
+                        <li>단일 콘텐츠로 다양한 디바이스 지원</li>
+                        <li>동일한 코드로 효율적 운영</li>
+                        <li>미디어 쿼리를 활용한 자동 레이아웃 조정</li>
+                        <li>다양한 웹 브라우저 지원</li>
+                        <li>다양한 OS 호환</li>
+                    </ul>
+                </div>
+
+                <div class="device-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <h3>디자인 방향성</h3>
+                    <p>사용자 중심의 명확하고 효율적인 시각화 디자인을 제공합니다.</p>
+                    <ul>
+                        <li>사용자가 이용하기 쉬운 명확한 디자인</li>
+                        <li>원하는 정보를 효율적으로 제공받도록 시각화된 디자인</li>
+                        <li>간단하고 편리한 UX/UI 구성</li>
+                        <li>직관적인 정보 구조 및 네비게이션</li>
+                    </ul>
+                </div>
+
+                <div class="device-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <h3>디지털 정보격차 최소화</h3>
+                    <p>모든 사용자층이 쉽게 이용할 수 있는 친절한 디자인을 구현합니다.</p>
+                    <ul>
+                        <li>PC/모바일 이용능력 수준을 고려한 친절한 디자인</li>
+                        <li>때와 장소를 가리지 않고 교육을 들을 수 있는 디자인</li>
+                        <li>접근성 가이드라인 준수</li>
+                        <li>다양한 디바이스 환경 최적화</li>
+                    </ul>
+                </div>
+
+                <div class="device-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <h3>콘텐츠 관리 및 지침 준수</h3>
+                    <p>통합 관리로 업무 효율을 극대화하고 공공기관 지침을 준수합니다.</p>
+                    <ul>
+                        <li>통합 CMS 연동으로 일괄 관리</li>
+                        <li>모바일 전자정부 서비스 관리 지침 준수</li>
+                        <li>웹 콘텐츠 제작기법 2.1 준수</li>
+                        <li>웹 콘텐츠 신기술 제작기법 가이드라인 적용</li>
+                    </ul>
+                </div>
+
+                <div class="device-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                    <h3>웹 표준 및 보안</h3>
+                    <p>검증된 표준을 준수하여 안전하고 접근성 높은 서비스를 제공합니다.</p>
+                    <ul>
+                        <li>한국형 웹 콘텐츠 접근성 지침 2.2 준수</li>
+                        <li>구조/표현/동작의 완벽한 분리</li>
+                        <li>W3C 웹 표준 기술 지원</li>
+                        <li>공공기관 개인정보 노출 방지 가이드라인 준수</li>
+                    </ul>
+                </div>
+
+                <div class="device-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                    <h3>오류를 최소화하는 프로토타입 기반</h3>
+                    <p>사용자 경험을 고려한 프로토타입 기반의 탄탄한 디자인을 제공합니다.</p>
+                    <ul>
+                        <li>사용자 경험(UX)을 고려한 프로토타입 기반 탄탄한 디자인</li>
+                        <li>콘텐츠에 맞춘 레이아웃과 스타일 적용</li>
+                        <li>철저한 테스트 및 검증 프로세스</li>
+                        <li>지속적인 개선 및 업데이트</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 레이더 차트 섹션 -->
+            <div class="chart-section" data-aos="fade-up" data-aos-duration="800">
+                <h2 class="chart-title">전자정부 UI/UX 가이드라인을 기반으로 한 탄탄한 디자인</h2>
+                <div class="chart-container">
+                    <div class="radar-chart">
+                        <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                            <!-- 그리드 라인 -->
+                            <g class="grid-lines">
+                                <polygon points="250,50 433,125 433,325 250,450 67,325 67,125" fill="none" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="5,5"/>
+                                <polygon points="250,100 400,155 400,295 250,400 100,295 100,155" fill="none" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="5,5"/>
+                                <polygon points="250,150 367,185 367,265 250,350 133,265 133,185" fill="none" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="5,5"/>
+                                <polygon points="250,200 333,215 333,285 250,300 167,285 167,215" fill="none" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="5,5"/>
+                            </g>
+                            <!-- 데이터 영역 -->
+                            <polygon points="250,100 380,155 400,200 367,280 250,380 133,310 100,200 120,155" fill="#e3f2fd" stroke="#0064FF" stroke-width="2" stroke-dasharray="5,3" opacity="0.6"/>
+                            <!-- 데이터 포인트 -->
+                            <circle cx="380" cy="155" r="8" fill="#ff6b35"/>
+                            <circle cx="250" cy="100" r="8" fill="#0064FF"/>
+                            <circle cx="400" cy="200" r="8" fill="#0064FF"/>
+                            <circle cx="367" cy="280" r="8" fill="#0064FF"/>
+                            <circle cx="250" cy="380" r="8" fill="#0064FF"/>
+                            <circle cx="133" cy="310" r="8" fill="#0064FF"/>
+                            <circle cx="100" cy="200" r="8" fill="#ff6b35"/>
+                            <circle cx="120" cy="155" r="8" fill="#0064FF"/>
+                            <!-- 축 -->
+                            <line x1="250" y1="50" x2="250" y2="25" stroke="#333" stroke-width="2"/>
+                            <text x="250" y="15" text-anchor="middle" font-size="14" font-weight="600" fill="#1a1a1a">브랜드영역</text>
+                            
+                            <line x1="433" y1="125" x2="458" y2="145" stroke="#333" stroke-width="2"/>
+                            <text x="470" y="150" font-size="14" font-weight="600" fill="#1a1a1a">탐색</text>
+                            
+                            <line x1="433" y1="325" x2="458" y2="325" stroke="#333" stroke-width="2"/>
+                            <text x="470" y="330" font-size="14" font-weight="600" fill="#1a1a1a">검색</text>
+                            
+                            <line x1="250" y1="450" x2="250" y2="475" stroke="#333" stroke-width="2"/>
+                            <text x="250" y="495" text-anchor="middle" font-size="14" font-weight="600" fill="#1a1a1a">콘텐츠</text>
+                            
+                            <line x1="67" y1="325" x2="42" y2="325" stroke="#333" stroke-width="2"/>
+                            <text x="15" y="330" font-size="14" font-weight="600" fill="#1a1a1a">회원</text>
+                            
+                            <line x1="67" y1="125" x2="42" y2="105" stroke="#333" stroke-width="2"/>
+                            <text x="10" y="100" font-size="14" font-weight="600" fill="#1a1a1a">신청/조회</text>
+                            
+                            <line x1="250" y1="50" x2="250" y2="25" stroke="#333" stroke-width="2"/>
+                            
+                            <line x1="433" y1="225" x2="458" y2="215" stroke="#333" stroke-width="2"/>
+                            <text x="470" y="210" font-size="14" font-weight="600" fill="#1a1a1a">안내</text>
+                            
+                            <line x1="67" y1="225" x2="42" y2="235" stroke="#333" stroke-width="2"/>
+                            <text x="10" y="250" font-size="14" font-weight="600" fill="#1a1a1a">지원/기타</text>
+                        </svg>
+                    </div>
+                    <div class="chart-content">
+                        <div class="chart-content-item">
+                            <div class="icon">✓</div>
+                            <div class="text">전자정부 웹사이트 UI/UX 가이드라인 및 제안사의 자체 점검 기준을 적용</div>
+                        </div>
+                        <div class="chart-content-item">
+                            <div class="icon">✓</div>
+                            <div class="text">8개 분야 / 30개 세부패턴 / 132개 항목에 대한 진단</div>
+                        </div>
+                        <div class="chart-content-item">
+                            <div class="icon">✓</div>
+                            <div class="text">핵심 개선 영역을 도출하여 UX개선방향 결정</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="index.html" class="back-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+                    메인으로 돌아가기
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer id="footer" role="contentinfo">
+    <div class="inner">
+        <div class="footer_top">
+            <div class="footer_logo">
+                <img src="assets/images/clients/logo_lx2.png" alt="LX2" class="logo-img">
+            </div>
+            <ul class="foot_menu">
+                <li><a href="index.html">회사소개</a></li>
+                <li><a href="features.html">주요기능</a></li>
+                <li><a href="privacy.html">개인정보처리방침</a></li>
+                <li><a href="brochure_viewer.html" target="_blank">서비스소개서</a></li>
+            </ul>
+        </div>
+        <div class="footer_info">
+            <p>회사명. (주)포씨소프트 &nbsp;&nbsp;<br> 설립일자. 1999년 5월 19일 &nbsp;&nbsp;<br>사업자등록번호: 211-86-52456
+             대표이사. 배정훈 &nbsp;&nbsp;<br> 주소. (13814) 경기도 과천시 과천동 372-15 우림빌딩 204호
+             업종. 응용 소프트웨어개발 및 공급 &nbsp;&nbsp;<br>Tel. 02-544-2822 &nbsp;&nbsp;<br> E-mail. leo4@4csoft.com</p>
+        </div>
+        <div class="footer_copyright">
+            <p>ⓒ 4CSoft Inc. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+// AOS 초기화
+AOS.init({
+    duration: 800,
+    once: true
+});
+
+// 메뉴 토글
+$('.menu_btn').click(function() {
+    $(this).toggleClass('active');
+    $('.menu_box').toggleClass('active');
+});
+</script>
+
+</body>
+</html>

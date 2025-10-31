@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title></title>
+<!-- meta tag -->
+<meta name="robots" content="index,follow">
+<meta name="keywords" content="LX2, LMS, AI 기반 맞춤형 학습관리 시스템, 온라인 교육솔루션">
+<meta name="description" content="LX2 학습관리시스템은 맞춤형 설계, 혁신적 기능, 검증된 기술을 바탕으로 현업에 즉시 활용할 수 있는 최적의 LMS 솔루션입니다.">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lx2.kr/">
+<meta property="og:title" content="">
+<meta property="og:description" content="LX2 학습관리시스템은 맞춤형 설계, 혁신적 기능, 검증된 기술을 바탕으로 현업에 즉시 활용할 수 있는 최적의 LMS 솔루션입니다.">
+<meta property="og:image" content="/static/common/images/www/common/lx2_og.png" />
+
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Cache-control" content="no-cache" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0"/>
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<meta name="naver-site-verification" content="7313dfdeefc93dca4498e14e562031cdf9f287eb" />
+<meta name="google-site-verification" content="dw9p9IvzaTh373wScNU8JaNuVvjnBC4GzMmnl7tGGFk" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" /><link href="/static/common/images/www/common/favicon.ico" rel="shortcut icon" />
+<link rel="stylesheet" href="/static/common/css/www/common.css" />
+<link rel="stylesheet" href="/static/font/SCoreDream.css" />
+<link rel="stylesheet" href="/static/font/material-icons.css">
+
+<link rel="stylesheet" href="/static/js/3rdparty/kendouiForJquery/styles/kendo.default-ocean-blue.min.css">
+<link rel="stylesheet" href="/static/lib/fullcalendar-2.2.3/fullcalendar.css">
+<script type="text/javascript" src="/static/js/3rdparty/kendouiForJquery/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/3rdparty/kendouiForJquery/js/kendo.all.min.js"></script>
+<script type="text/javascript" src="/static/js/3rdparty/kendouiForJquery/js/kendo.cus.min.js"></script>
+<script type="text/javascript" src="/static/js/3rdparty/kendouiForJquery/js/jszip.min.js"></script>
+
+<script type="text/javascript" src="/static/js/3rdparty/kendouiForJquery/js/cultures/kendo.culture.ko-KR.min.js"></script>
+	<script type="text/javascript" src="/static/js/3rdparty/kendouiForJquery/js/messages/kendo.messages.ko-KR.min.js"></script>
+<script type="text/javascript" src="/static/common/js/www/moment.min.js"></script>
+<script type="text/javascript" src="/static/common/js/www/jquery.daterangepicker.min.js"></script>
+<script type="text/javascript" src="/static/js/lib/jquery.aos.i18n.ko.min.js"></script>
+<script type="text/javascript" src="/static/js/lib/jquery.aos.min.js"></script>
+<script type="text/javascript" src="/static/js/lib/jquery.aos.ui.min.js"></script>
+<script type="text/javascript" src="/static/js/lib/jquery.aos.util.min.js"></script>
+<script type="text/javascript" src="/common/js/functions.jsp;jsessionid=F7009E7CEE542552CF521287A1532A82.was2"></script>
+<script type="text/javascript" src="/common/js/define.jsp;jsessionid=F7009E7CEE542552CF521287A1532A82.was2"></script>
+<script type="text/javascript" src="/static/common/js/www/design.js"></script>
+<script type="text/javascript" src="/static/common/js/www/slick.min.js"></script>
+
+<script src="/static/lib/fullcalendar-2.2.3/fullcalendar.min.js"></script>
+<script src="/static/lib/fullcalendar-2.2.3/lang-all.js"></script>
+
+<script src="/static/lib/fullcalendar-2.2.3/lang/ko.js"></script>
+<script type="text/javascript" src="/static/js/3rdparty/editor/tinymce/tinymce.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/editorjs-html@3.4.0/build/edjsHTML.js"></script><!-- EditorJs Parser -->
+
+<!-- Core  include only Paragraph block -->
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+<!-- Header Plug-in-->
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
+<!-- Link embeds-->
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/link@latest"></script>
+<!-- Raw Html -->
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/raw@latest"></script>
+<!-- Simple Image -->
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/simple-image@latest"></script>
+<!-- Image -->
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/image@latest"></script>
+<!-- CheckList -->
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/checklist@latest"></script>
+<!-- List -->
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest"></script>
+<!-- Embed -->
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/embed@latest"></script>
+<!-- Quote -->
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/quote@latest"></script>
+<!-- Table -->
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/table@latest"></script>
+<!-- Nested List -->
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/nested-list@latest"></script>
+<!-- Delimiter -->
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/delimiter@latest"></script>
+<!-- Warning -->
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/warning@latest"></script>
+<!-- Code -->
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/code@latest"></script>
+<!--  Attach -->
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/attaches@latest"></script>
+<!-- Marker-->
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/marker@latest"></script>
+<!-- Inline Code -->
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/inline-code@latest"></script>
+<!-- UnderLine -->
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/underline@latest"></script>
+<!-- Alert -->
+<script src="https://cdn.jsdelivr.net/npm/editorjs-alert@latest"></script>
+<!-- Font color -->
+<script src="https://cdn.jsdelivr.net/npm/editorjs-text-color-plugin@latest"></script>
+<!-- Mermaid  필요없는 놈 
+<script src="https://cdn.jsdelivr.net/npm/editorjs-mermaid@latest"></script>
+-->
+<!-- Codeflask -->
+<script src="https://cdn.jsdelivr.net/npm/@calumk/editorjs-codeflask@latest"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/editorjs-youtube-embed-extended@1.0.3/dist/main.min.js"></script>
+ 
+ <script>
+ 
+</script>
+
+<script type="text/javascript">
+initPage = function() {
+
+};
+</script>
+<style>
+.p_error2 {display:flex;height:100%;align-items:center;justify-content:center;flex-direction: column;}
+.p_error2 .ct {max-width:600px;padding:20px;color:#282728;}
+.p_error2 h1 {margin-bottom:20px;}
+.p_error2 h1 a {display:inline-block;}
+.p_error2 .desc {padding:40px 0;border-top:1px solid #ccc;}
+.p_error2 h2 {line-height:1.3;margin-bottom:20px;font-size:32px;font-weight:bold;color:#212121;}
+.p_error2 p {line-height:1.4;font-size:22px;}
+.p_error2 .help {text-align:center;}
+.p_error2 .home {display:inline-block;height:60px;line-height:60px;padding:0 30px;font-size:20px;color:#fff;background-color:#3679c1;}
+</style>
+<script type="text/javascript">
+var $layer = null;
+jQuery(document).ready(function(){
+	Global.parameters = jQuery("#FormGlobalParameters").serialize(); // 공통파라미터
+	jQuery(document).keydown(function(event) {
+		UT.preventBackspace(event);
+	});
+	initPage();
+	
+	UT.noscrollingIframe();
+});
+
+doReadySystem= function(ment) {
+	 $.dialog("alert", {
+       message : ment,
+   });
+	 return;
+};
+
+/**
+* 준비 중 입니다.
+*/
+doAlert = function() {
+	 $.dialog("alert", {
+        message : "In preparation.",
+    });
+	 return;
+};
+
+</script>
+</head>
+<body>
+
+	<form id="FormGlobalParameters" name="FormGlobalParameters" method="post" onsubmit="return false;">
+<input type="hidden" name="currentMenuId" value=""/>
+<input type="hidden" name="isFlag" value=""/>
+<input type="hidden" name="CSRFToken" value="8WQvU!PY2+BighgoqcIZvA@@">
+<input type="hidden" name="returnUrl" value="" />
+<input type="hidden" name="loginReturnUrl" />
+</form>
+
+<form id="FormParameters" name="FormParameters" method="post" onsubmit="return false;">
+</form>
+
+<form id="FormParametersMember" name="FormParametersMember" method="post" onsubmit="return false;">
+<input type="hidden" name="taskUserYn" value="Y" />
+<input type="hidden" name="taskProfYn" value="N" />
+<input type="hidden" name="memberEmsTypeCd" value="MEMBER_EMS_TYPE::S01" />
+<input type="hidden" name="currentMenuId" value="900000001" />
+</form>
+
+<form name="form-attach-preview" id="form-attach-preview" method="post" onsubmit="return false;">
+	<input type="hidden" name="attachSeq" id="attachSeq" />
+</form>
+
+<form name="form-analytics" id="form-analytics" method="post" onsubmit="return false;">
+	<input type="hidden" name="id" id="id" />
+</form>
+
+
+
+ <script type="text/javascript">
+
+ 	function loginPop(returnUrl) {
+
+		var action = $.action();
+		action.config.formId = "FormGlobalParameters";
+		action.config.url    = "https://lx2.kr/common/login/loginpage.do;jsessionid=F7009E7CEE542552CF521287A1532A82.was2";
+		var form = UT.getById(action.config.formId);
+		if (returnUrl == null || returnUrl == '') {
+			returnUrl = form.elements["returnUrl"].value;
+		}
+
+   		form.elements["loginReturnUrl"].value = returnUrl;
+		action.run();
+	};
+
+
+	 var COURSE_ITEM = {
+		doGoCourseDetail : function(params){
+			var action = $.action("normal", {formId : "FormGlobalParameters"});
+			action.config.url    = "/course/active/detail.do;jsessionid=F7009E7CEE542552CF521287A1532A82.was2?courseMasterSeq="+params.courseMasterSeq+"&courseActiveSeq="+params.courseActiveSeq;
+		    UT.copyValueMapToForm(params, action.config.formId);
+			action.run();
+		},
+		doGoSmallLearningDetail : function(params){
+			//if(sessionAlive) {
+				var action = $.action("normal", {formId : "FormGlobalParameters"});
+				action.config.url    = "/small/learning/detail.do;jsessionid=F7009E7CEE542552CF521287A1532A82.was2?courseMasterSeq="+params.courseMasterSeq+"&courseActiveSeq="+params.courseActiveSeq;
+				UT.copyValueMapToForm(params, action.config.formId);
+				action.run();
+			//} else{
+			//	loginPop('');
+			//}
+		},
+		/*
+		강의계획서
+		*/
+		doGoCourseDetailPopup : function(params){
+			var action = $.action("layer", {formId : "FormGlobalParameters"});
+			action.config.url    = "/course/active/detail/popup.do;jsessionid=F7009E7CEE542552CF521287A1532A82.was2?courseMasterSeq="+params.courseMasterSeq+"&courseActiveSeq="+params.courseActiveSeq;
+			action.config.options.width  = 1000;
+			action.config.options.height = 700;
+			action.config.options.title = "Syllabus";
+		    UT.copyValueMapToForm(params, action.config.formId);
+			action.run();
+		},
+		
+		doApplyRequest : function(mapPKs) {
+			var formClassroom = UT.getById("FormClassroom");
+			formClassroom.elements["courseActiveSeq"].value = mapPKs.courseActiveSeq;
+			formClassroom.elements["courseApplyTmplSeq"].value = mapPKs.courseApplyTmplSeq;
+
+			if(sessionAlive) {
+				if (mapPKs.passwordYn == "Y" && mapPKs.passwordTypeCd == "COURSE_PASSWORD_TYPE::001" && mapPKs.passYn !="Y") {
+					$("#pop_chk_apply_pass").fadeIn();
+				} else {
+					
+					if (mapPKs.surveyPassYn != "Y") {
+						COURSE_ITEM.doSurvey(mapPKs, 'before', 'COURSE_SURVEY_JOIN_TYPE::001');
+					}
+					
+					if (mapPKs.surveyPassYn == "Y") {
+						if (mapPKs.courseApplyTmplSeq <= 0) {
+							action = $.action("ajax", {formId : "FormApplyInsert"});
+							action.config.url             = "/usr/course/apply/non/insert/json.do;jsessionid=F7009E7CEE542552CF521287A1532A82.was2";
+							action.config.type        	= "json";
+							action.config.message.confirm = "Would you like to Enroll for the course?";
+							action.config.message.waiting = "Course registration in progress.";
+							action.config.fn.complete     = function(action, data) {
+								if (data != null && data.result != null) {
+									if(data.result=='-11'){
+										doReadySystem("정원이 초과되었습니다.");
+									} else if (data.result=='-95') {
+										doReadySystem("Not a learning target course.");
+									}else{
+										window.location.href='/usr/member/dash/detail.do;jsessionid=F7009E7CEE542552CF521287A1532A82.was2';
+									}
+						        } else {
+						            FN.doErrorMessage();
+						        }
+							};
+							UT.getById(action.config.formId).reset();
+							UT.copyValueMapToForm(mapPKs, action.config.formId);
+							action.run();
+						} else {
+							//수강신청서
+							var action = $.action("ajax",{formId : "FormApplyInsert"});
+						     action.config.type = "html";
+						     action.config.url    = "/usr/courseApplyTmpl/create/popup.do;jsessionid=F7009E7CEE542552CF521287A1532A82.was2";
+						     action.config.containerId = "ct_courseApplyTmplPopup";
+						     UT.copyValueMapToForm(mapPKs, action.config.formId);
+						     action.config.fn.complete = function(act, data) {
+						    	 $("#courseApplyTmplPopup").fadeIn();
+						     };
+						     UT.copyValueMapToForm(mapPKs, action.config.formId);
+						     action.run();
+						}
+					}
+
+				}
+
+			}else{
+				loginPop('');
+			}
+		},
+		 doSurvey : function(mapPKs, elementType, courseSurveyJoinType) {
+			action = $.action("ajax", {formId : "FormSurveyDetail"});
+			action.config.url             = "/usr/course/active/surveypaper/elementType/check/json.do;jsessionid=F7009E7CEE542552CF521287A1532A82.was2".replace("elementType",elementType);
+			action.config.type        	= "json";
+			action.config.fn.complete     = function(action, data) {
+				if (data != null && data.result != null) {
+					if(data.result=='-1') {
+						if (courseSurveyJoinType == 'COURSE_SURVEY_JOIN_TYPE::001') {
+							mapPKs.surveyPassYn = "Y";
+							COURSE_ITEM.doApplyRequest(mapPKs);	
+						} else {
+							mapPKs.surveyClassPassYn = "Y";
+							COURSE_ITEM.doClassroom(mapPKs);	
+						}
+						//doReadySystem("출제된 설문지가 없습니다.");
+					} else {
+						//설문참여
+						if (data.submitYn != 'Y') {
+							var action2 = $.action("ajax",{formId : "FormSurveyDetail"});
+						     action2.config.type = "html";
+						     action2.config.url    = "/usr/course/active/survey/paper/elementType/ajax.do;jsessionid=F7009E7CEE542552CF521287A1532A82.was2".replace("elementType",elementType);
+						     action2.config.containerId = "ct_surveyPopup";
+						     action2.config.fn.complete = function(act, data2) {
+						    	 $("#surveyPopup").fadeIn();
+						    	 SUB.initPage();
+						     };
+						     
+						     
+						     var form = UT.getById(action2.config.formId);
+						     form.elements["mandatoryYn"].value = data.mandatoryYn;
+						     form.elements["courseActiveSeq"].value = data.courseActiveSeq;
+						     form.elements["courseActiveSurveySeq"].value = data.courseActiveSurveySeq;
+						     form.elements["courseApplyTmplSeq"].value = mapPKs.courseApplyTmplSeq;
+						     form.elements["courseSurveyJoinType"].value = courseSurveyJoinType;
+						     
+						     action2.run();
+						} else {
+							//설문참여 완료
+							if (courseSurveyJoinType == 'COURSE_SURVEY_JOIN_TYPE::001') {
+								mapPKs.surveyPassYn = "Y";
+								COURSE_ITEM.doApplyRequest(mapPKs);	
+							} else {
+								mapPKs.surveyClassPassYn = "Y";
+								COURSE_ITEM.doClassroom(mapPKs);	
+							}
+						}
+						
+						
+					}
+		        } else {
+		            FN.doErrorMessage();
+		        }
+			};
+			UT.getById(action.config.formId).reset();
+			UT.copyValueMapToForm(mapPKs, action.config.formId);
+			
+			var form = UT.getById(action.config.formId);
+		    form.elements["courseSurveyJoinType"].value = courseSurveyJoinType;
+			action.run();
+			
+		},
+		 doExam : function(mapPKs, elementType) {
+			
+			 	action = $.action("ajax", {formId : "FormExamDetail"});
+				action.config.url             = "/usr/course/active/exampaper/elementType/check/json.do;jsessionid=F7009E7CEE542552CF521287A1532A82.was2".replace("elementType",elementType);
+				action.config.type        	= "json";
+				action.config.fn.complete     = function(action, data) {
+					
+					if (data != null && data.result != null) {
+						if(data.result=='-1') {
+								mapPKs.examClassPassYn = "Y";
+								COURSE_ITEM.doClassroom(mapPKs);	
+							//doReadySystem("출제된 시험지가 없습니다.");
+						} else {
+							//시험 참여
+							if (data.submitYn != 'Y') {
+
+								var action2 = $.action("layer",{formId : "FormExamDetail"});
+							     action2.config.type = "html";
+							     action2.config.url    = "/usr/course/exampaper/detail/elementType/popup.do;jsessionid=F7009E7CEE542552CF521287A1532A82.was2".replace("elementType",elementType);
+							     action2.config.options.width  = 1450;
+							     action2.config.options.height  = 920;
+							     action2.config.options.position = "middle";
+							     
+							     
+							     var form = UT.getById(action2.config.formId);
+							     form.elements["courseActiveSeq"].value = data.courseActiveSeq;
+							     form.elements["courseApplySeq"].value = data.courseApplySeq;
+							     form.elements["courseActiveExamPaperSeq"].value = data.courseActiveExamPaperSeq;
+							     form.elements["activeElementSeq"].value = data.activeElementSeq;
+							     form.elements["examPaperSeq"].value = data.examPaperSeq;
+							     form.elements["callback"].value = "COURSE_ITEM.doClassroom({'surveyClassPassYn' : 'Y', 'examClassPassYn' : 'Y', 'passYn' : 'Y', 'courseApplyTmplSeq' : '-1', 'courseActiveSeq' : '"+data.courseActiveSeq+"', 'courseApplySeq' : '"+data.courseApplySeq+"'});";
+							     form.elements["courseApplyTmplSeq"].value = mapPKs.courseApplyTmplSeq;
+							     action2.run();
+							} else {
+								//시험 참여 완료
+								mapPKs.examClassPassYn = "Y";
+								COURSE_ITEM.doClassroom(mapPKs);	
+							}
+							
+						}
+			        } else {
+			            FN.doErrorMessage();
+			        }
+				};
+				UT.getById(action.config.formId).reset();
+				UT.copyValueMapToForm(mapPKs, action.config.formId);
+
+				action.run();
+			
+		},
+		 doClassroom : function(mapPKs) {
+
+			UT.getById("FormClassroom").reset();
+			UT.copyValueMapToForm(mapPKs, "FormClassroom");
+
+			if (mapPKs.passwordYn == "Y" && mapPKs.passwordTypeCd == "COURSE_PASSWORD_TYPE::002" && mapPKs.passYn !="Y") {
+				UT.copyValueMapToForm(mapPKs, "FormCoursePassword");
+				$("#pop_chk_course_pass").fadeIn();
+			} else {
+				
+				if (mapPKs.surveyClassPassYn == 'Y') {
+					if (mapPKs.examClassPassYn == 'Y') {
+						
+						var action2 = $.action();
+						action2.config.formId = "FormClassroom";
+						action2.config.url = "/usr/classroom/main.do;jsessionid=F7009E7CEE542552CF521287A1532A82.was2";
+						action2.run();
+					} else {
+						mapPKs.courseApplyTmplSeq = -1;
+						COURSE_ITEM.doExam(mapPKs, 'before');
+					}
+				} else {
+					mapPKs.courseApplyTmplSeq = -1;
+					COURSE_ITEM.doSurvey(mapPKs, 'before', 'COURSE_SURVEY_JOIN_TYPE::002');
+				}
+				
+			}
+		},
+		doSmallLearningClassroom : function(mapPKs) {
+			var action = $.action();
+			action.config.formId = "FormSmallLearningClassroom";
+			action.config.url = "/small/learning/sclassroom/main.do;jsessionid=F7009E7CEE542552CF521287A1532A82.was2";
+			
+			UT.getById(action.config.formId).reset();
+			UT.copyValueMapToForm(mapPKs, action.config.formId);
+			
+			action.run();
+		},
+		doPreview : function(mapPKs) {
+		 	
+			var form = UT.getById("form-main-preview");
+	        form.elements["courseActiveTitle"].value = mapPKs.courseActiveTitle;
+	        form.elements["organizationSeq"].value = mapPKs.organizationSeq;
+			
+			action = $.action("ajax", {formId : "form-main-preview"});
+			action.config.url             = "/orgainization/preview/org/check/json.do;jsessionid=F7009E7CEE542552CF521287A1532A82.was2";
+			action.config.type        	= "json";
+			action.config.fn.complete     = function(action, data) {
+				if (data != null && data.result != null) {
+					// OER 분기
+					
+			        form.elements["courseActiveSeq"].value = mapPKs.courseActiveSeq;
+			        form.elements["itemSeq"].value = data.itemSeq;
+			        form.elements["itemIdentifier"].value = data.itemIdentifier;
+			        form.elements["contentsTypeCd"].value = data.contentsTypeCd;
+			        form.elements["href"].value = data.href;
+			        form.elements["href"].value = data.href;
+				        
+					if(data.contentsTypeCd == "CONTENTS_TYPE::OER"){
+				    	var action2 = $.action("layer");
+				    	action2.config.formId = "form-main-preview";
+				    	action2.config.url            = "/usr/orgainization/preview.do;jsessionid=F7009E7CEE542552CF521287A1532A82.was2";
+				    	action2.config.options.title  = "미리보기";
+				    	action2.config.options.width = 1000;
+				    	action2.config.options.height = 600;
+				    	
+				    	
+				    	action2.run();
+
+				 	} else{
+				    	var action2 = $.action("ajax", {formId : "form-main-preview"});
+				    	action2.config.formId = "form-main-preview";
+				    	action2.config.type = "html";
+				    	action2.config.containerId = "ct";
+				    	action2.config.url            = "/orgainization/preview.do;jsessionid=F7009E7CEE542552CF521287A1532A82.was2";
+				    	action2.config.fn.complete     = function(action2, data) {
+				        	$('#pop_preview').show();
+						};
+						action2.run();
+				 	}
+		        } else {
+		            FN.doErrorMessage();
+		        }
+			};
+			
+			action.run();
+			
+		 },
+		 doClosePerview : function(){
+			 setTimeout(function() {
+				 $('#ct').empty();
+				}, 500);
+		 },
+		 doGoOpenLecture : function(params){
+			var action = $.action("normal", {formId : "FormGlobalParameters"});
+			action.config.url    = "/course/active/detail.do;jsessionid=F7009E7CEE542552CF521287A1532A82.was2?courseMasterSeq="+params.courseMasterSeq+"&courseActiveSeq="+params.courseActiveSeq;
+			action.config.url    = "/open/open/lecture/detail.do;jsessionid=F7009E7CEE542552CF521287A1532A82.was2?openLectureSeq="+params.openLectureSeq;
+		    UT.copyValueMapToForm(params, action.config.formId);
+			action.run();
+		},
+		doApplyPassword : function() {
+			var form = UT.getById("FormApplyPassword");	
+			var formClassroom = UT.getById("FormClassroom");	
+			form.elements["courseActiveSeq"].value = formClassroom.elements["courseActiveSeq"].value;
+			
+			var action = $.action("ajax");
+			action.config.type   = "json";
+			action.config.formId = "FormApplyPassword";
+			action.config.url    = "/usr/course/active/check/password/json.do;jsessionid=F7009E7CEE542552CF521287A1532A82.was2";
+		  	action.config.fn.validate = function() {
+				if (Global.validator.checker["!null"](form.elements['password'].value) == false) {
+					$.dialog("alert", {message : "Please enter your password."});
+					return false;	
+				}
+				return true;
+			};
+			action.config.fn.complete = function(action, data) {
+				if (data.success != null && data.success > 0) {
+					$("#pop_chk_apply_pass").fadeOut();
+					COURSE_ITEM.doApplyRequest({'surveyPassYn' : 'N', 'passYn' : 'Y', 'courseApplyTmplSeq' : formClassroom.elements["courseApplyTmplSeq"].value, 'courseActiveSeq' : formClassroom.elements["courseActiveSeq"].value});
+				} else {
+					$.dialog("alert", {message : "Password does not match."});
+					form.elements["password"].value = null;
+				}
+			};
+			action.run();
+		},
+		doApplyPasswordClose : function(){
+			$("#pop_chk_apply_pass").fadeOut();
+		}
+
+	};
+
+	pageOpen = new Date();
+	function bye() {
+		pageClose = new Date();
+		minutes = (pageClose.getMinutes() - pageOpen.getMinutes());
+		seconds = (pageClose.getSeconds() - pageOpen.getSeconds());
+		time = (seconds + (minutes * 60));
+		var url = window.location.pathname;
+		//alert('저희 홈페이지에 ' + time + '초 동안 머무르셨습니다');
+		console.log(url + ' 페이지에 ' + time + '초 동안 머무르셨습니다');
+	}
+
+	window.onbeforeunload = function (event) {
+
+        	
+		pageclose(); // Analytics call
+        
+		
+		if( typeof(API) != 'undefined' ) {
+			API.Terminate("");
+		}
+
+		bye();
+	}
+
+	function pageopen() {
+
+		var form = UT.getById("form-analytics");
+
+        jQuery.ajax({
+            url : "https://lx2.kr/api/analytics/pageopen.do;jsessionid=F7009E7CEE542552CF521287A1532A82.was2",
+            cache : false,
+            dataType : 'json',
+            data : {
+                url : window.location.href,
+                referer : document.referrer
+            },
+            success : function(res){
+				//console.log("res:" + res.uuid)
+				form.elements["id"].value = res.id;
+            }
+        });
+
+	}
+
+	function pageclose() {
+
+		var form = UT.getById("form-analytics");
+
+        jQuery.ajax({
+            url : "https://lx2.kr/api/analytics/pageclose.do;jsessionid=F7009E7CEE542552CF521287A1532A82.was2",
+            cache : false,
+            dataType : 'json',
+            data : {
+                id : form.elements["id"].value
+            },
+            success : function(res){
+				console.log("res:" + res.result)
+            }
+        });
+	}
+
+	jQuery(document).ready(function(){
+		
+        
+			pageopen();  // Analytics call
+        
+	});
+
+ </script>
+
+<div class="p_error2">
+		<div class="ct">
+			<h1><a href="/;jsessionid=F7009E7CEE542552CF521287A1532A82.was2"><img src="/static/common/images/www/common/logo.png" alt="LX2"></a></h1>
+			<div class="desc">
+				<h2>요청하신 페이지를 찾을 수 없습니다.</h2>
+				<p>
+					입력한 주소가 잘못되었거나,
+					<br>사용이 일시 중단되어 요청하신 페이지를 찾을 수 없습니다.
+					<br>서비스 이용에 불편을 드려 죄송합니다.
+				</p>
+			</div>
+			<div class="help">
+				<a href="/;jsessionid=F7009E7CEE542552CF521287A1532A82.was2" class="home">메인 페이지 바로가기</a>
+			</div>
+		</div>
+	</div>
+<iframe name="hiddenframe" id="hiddenframe" height="0" width="0" style="display:none;" title="hidden"></iframe>
+
+</body>
+</html>
